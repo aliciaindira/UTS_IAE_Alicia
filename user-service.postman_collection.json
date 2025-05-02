@@ -1,0 +1,506 @@
+{
+	"info": {
+		"_postman_id": "57c351bc-717f-4bc7-ac36-7f1f6bedbd74",
+		"name": "user-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44455604",
+		"_collection_link": "https://aliciaindira.postman.co/workspace/Alicia-Indira's-Workspace~cca95956-98c3-4646-8d57-10e99f173f0a/collection/44455604-57c351bc-717f-4bc7-ac36-7f1f6bedbd74?action=share&source=collection_link&creator=44455604"
+	},
+	"item": [
+		{
+			"name": "create buyer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Dira\", \r\n    \"email\": \"aliciaindira@gmail.com\",\r\n    \"phone\": \"08312345678\",\r\n    \"address\": \"sukolilo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{u_url}}api/buyers",
+					"host": [
+						"{{u_url}}api"
+					],
+					"path": [
+						"buyers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "berhasil",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Alicia\", \r\n    \"email\": \"aliciaindira06@gmail.com\",\r\n    \"phone\": \"08112345678\",\r\n    \"address\": \"semolowaru\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{u_url}}api/buyers",
+							"host": [
+								"{{u_url}}api"
+							],
+							"path": [
+								"buyers"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 26 Apr 2025 15:10:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Data Buyer Berhasil Dibuat\",\n    \"data\": {\n        \"name\": \"Alicia\",\n        \"email\": \"aliciaindira06@gmail.com\",\n        \"phone\": \"08112345678\",\n        \"address\": \"semolowaru\",\n        \"updated_at\": \"2025-04-26T15:10:55.000000Z\",\n        \"created_at\": \"2025-04-26T15:10:55.000000Z\",\n        \"id\": 1\n    }\n}"
+				},
+				{
+					"name": "create buyer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dira\", \r\n    \"email\": \"aliciaindira@gmail.com\",\r\n    \"phone\": \"08312345678\",\r\n    \"address\": \"sukolilo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{u_url}}api/buyers",
+							"host": [
+								"{{u_url}}api"
+							],
+							"path": [
+								"buyers"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 14:38:51 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Data Buyer Berhasil Dibuat\",\n    \"data\": {\n        \"name\": \"Dira\",\n        \"email\": \"aliciaindira@gmail.com\",\n        \"phone\": \"08312345678\",\n        \"address\": \"sukolilo\",\n        \"updated_at\": \"2025-05-02T14:38:51.000000Z\",\n        \"created_at\": \"2025-05-02T14:38:51.000000Z\",\n        \"id\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get Data Buyer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{u_url}}api/buyers",
+					"host": [
+						"{{u_url}}api"
+					],
+					"path": [
+						"buyers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get Data Buyer",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{u_url}}api/buyers",
+							"host": [
+								"{{u_url}}api"
+							],
+							"path": [
+								"buyers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 14:41:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Hi, Prettylicious\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Dira\",\n            \"email\": \"aliciaindira@gmail.com\",\n            \"phone\": \"08312345678\",\n            \"address\": \"sukolilo\",\n            \"created_at\": \"2025-05-02T14:38:51.000000Z\",\n            \"updated_at\": \"2025-05-02T14:38:51.000000Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Data Buyer by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{u_url}}api/buyers/1",
+					"host": [
+						"{{u_url}}api"
+					],
+					"path": [
+						"buyers",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Data Buyer by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{u_url}}api/buyers/1",
+							"host": [
+								"{{u_url}}api"
+							],
+							"path": [
+								"buyers",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 14:41:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Data Buyer Ditemukan\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Dira\",\n        \"email\": \"aliciaindira@gmail.com\",\n        \"phone\": \"08312345678\",\n        \"address\": \"sukolilo\",\n        \"created_at\": \"2025-05-02T14:38:51.000000Z\",\n        \"updated_at\": \"2025-05-02T14:38:51.000000Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Data Buyer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Indira\", \r\n    \"email\": \"aliciaindira06@gmail.com\",\r\n    \"phone\": \"08212345678\",\r\n    \"address\": \"surabaya\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{u_url}}api/buyers/1",
+					"host": [
+						"{{u_url}}api"
+					],
+					"path": [
+						"buyers",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Indira\", \r\n    \"email\": \"aliciaindira06@gmail.com\",\r\n    \"phone\": \"08212345678\",\r\n    \"address\": \"surabaya\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{u_url}}api/buyers/1",
+							"host": [
+								"{{u_url}}api"
+							],
+							"path": [
+								"buyers",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 26 Apr 2025 15:17:51 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Data Buyer berhasil diupdate\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Indira\",\n        \"email\": \"aliciaindira06@gmail.com\",\n        \"address\": \"surabaya\",\n        \"phone\": \"08212345678\",\n        \"created_at\": \"2025-04-26T15:10:55.000000Z\",\n        \"updated_at\": \"2025-04-26T15:17:51.000000Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Data Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{u_url}}api/buyers/2",
+					"host": [
+						"{{u_url}}api"
+					],
+					"path": [
+						"buyers",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Deleted",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{u_url}}api/buyers/2",
+							"host": [
+								"{{u_url}}api"
+							],
+							"path": [
+								"buyers",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 26 Apr 2025 15:21:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Data Buyer berhasil dihapus\",\n    \"data\": null\n}"
+				}
+			]
+		}
+	]
+}
