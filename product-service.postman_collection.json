@@ -1,0 +1,437 @@
+{
+	"info": {
+		"_postman_id": "6dac5616-b1f0-431c-854b-d0d88fe09d55",
+		"name": "product-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44455604",
+		"_collection_link": "https://aliciaindira.postman.co/workspace/Alicia-Indira's-Workspace~cca95956-98c3-4646-8d57-10e99f173f0a/collection/44455604-6dac5616-b1f0-431c-854b-d0d88fe09d55?action=share&source=collection_link&creator=44455604"
+	},
+	"item": [
+		{
+			"name": "Create data product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kemeja Pria\",\r\n    \"price\": 200000,\r\n    \"category\": \"Kemeja\",\r\n    \"size\": \"M\",\r\n    \"color\": \"Hitam\",\r\n    \"stock\": 10,\r\n    \"description\": \"Kemeja Kotak Kotak\",\r\n    \"material\": \"Cotton\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{p_url}}api\\products",
+					"host": [
+						"{{p_url}}api"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "berhasil",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Kaos Polos Hitam\",\r\n    \"price\": 125000,\r\n    \"category\": \"Kaos\",\r\n    \"size\": \"M\",\r\n    \"color\": \"Hitam\",\r\n    \"stock\": 10,\r\n    \"description\": \"Kaos polos warna hitam bahan nyaman dipakai\",\r\n    \"material\": \"Cotton\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{p_url}}api\\products",
+							"host": [
+								"{{p_url}}api"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8002"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 13:41:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Product telah berhasil ditambahkan\",\n    \"data\": {\n        \"name\": \"Kaos Polos Hitam\",\n        \"price\": 125000,\n        \"category\": \"Kaos\",\n        \"size\": \"M\",\n        \"color\": \"Hitam\",\n        \"stock\": 10,\n        \"description\": \"Kaos polos warna hitam bahan nyaman dipakai\",\n        \"material\": \"Cotton\",\n        \"updated_at\": \"2025-05-02T13:41:41.000000Z\",\n        \"created_at\": \"2025-05-02T13:41:41.000000Z\",\n        \"id\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get data product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{p_url}}api\\products",
+					"host": [
+						"{{p_url}}api"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "berhasil",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{p_url}}api\\products",
+							"host": [
+								"{{p_url}}api"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8002"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 13:42:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Products List\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Kaos Polos Hitam\",\n            \"price\": 125000,\n            \"category\": \"Kaos\",\n            \"size\": \"M\",\n            \"color\": \"Hitam\",\n            \"stock\": 10,\n            \"description\": \"Kaos polos warna hitam bahan nyaman dipakai\",\n            \"material\": \"Cotton\",\n            \"created_at\": \"2025-05-02T13:41:41.000000Z\",\n            \"updated_at\": \"2025-05-02T13:41:41.000000Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "get data product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{p_url}}api\\products\\1",
+					"host": [
+						"{{p_url}}api"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "berhasil",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{p_url}}api\\products\\1",
+							"host": [
+								"{{p_url}}api"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8002"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 13:43:04 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Product Ditemukan\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Kaos Polos Hitam\",\n        \"price\": 125000,\n        \"category\": \"Kaos\",\n        \"size\": \"M\",\n        \"color\": \"Hitam\",\n        \"stock\": 10,\n        \"description\": \"Kaos polos warna hitam bahan nyaman dipakai\",\n        \"material\": \"Cotton\",\n        \"created_at\": \"2025-05-02T13:41:41.000000Z\",\n        \"updated_at\": \"2025-05-02T13:41:41.000000Z\"\n    }\n}"
+				},
+				{
+					"name": "gagal",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{p_url}}api\\products\\2",
+							"host": [
+								"{{p_url}}api"
+							],
+							"path": [
+								"products",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8002"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 13:43:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": \"Product tidak ditemukan\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "update data by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"stock\": 50,\r\n    \"description\": \"Kaos polos warna hitam bahan nyaman dipakai\",\r\n    \"material\": \"Cotton\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{p_url}}api\\products\\1",
+					"host": [
+						"{{p_url}}api"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "berhasil",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stock\": 50,\r\n    \"description\": \"Kaos polos warna hitam bahan nyaman dipakai\",\r\n    \"material\": \"Cotton\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{p_url}}api\\products\\1",
+							"host": [
+								"{{p_url}}api"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8002"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 13:44:37 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Product Berhasil Diupdate\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Kaos Polos Hitam\",\n        \"price\": 125000,\n        \"category\": \"Kaos\",\n        \"size\": \"M\",\n        \"color\": \"Hitam\",\n        \"stock\": 50,\n        \"description\": \"Kaos polos warna hitam bahan nyaman dipakai\",\n        \"material\": \"Cotton\",\n        \"created_at\": \"2025-05-02T13:41:41.000000Z\",\n        \"updated_at\": \"2025-05-02T13:44:37.000000Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{p_url}}api\\products\\2",
+					"host": [
+						"{{p_url}}api"
+					],
+					"path": [
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
